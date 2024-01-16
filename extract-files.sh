@@ -118,6 +118,10 @@ if [ -z "${SECTION}" ]; then
     extract_firmware "${MY_DIR}/proprietary-firmware.txt" "${SRC}"
 fi
 
+if [ -z "${SECTION}" ]; then
+    extract_firmware "${MY_DIR}/proprietary-firmware.txt" "${SRC}"
+fi
+
 "${MY_DIR}/setup-makefiles.sh"
 
 vndk_import "${ANDROID_ROOT}" "libutils" "32" "both" "vndk-sp"
