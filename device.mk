@@ -67,6 +67,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # AAPT
 PRODUCT_CHARACTERISTICS := tablet
+TARGET_SCREEN_HEIGHT := 2000
+TARGET_SCREEN_WIDTH := 1200
+
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := 440dpi
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
