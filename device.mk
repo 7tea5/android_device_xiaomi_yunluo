@@ -139,11 +139,6 @@ PRODUCT_PACKAGES += \
     fastbootd \
     android.hardware.fastboot@1.1-impl-mock
 
-
-# FM Radio
-PRODUCT_PACKAGES += \
-    FMRadio
-
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
@@ -303,10 +298,16 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+# Remove packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Overlays
 PRODUCT_PACKAGES += \
 	FrameworksResOverlayYunluo \
-    SettingsResOverlayYunluo \
+    SettingsOverlayYunluo \
+	SettingsResOverlayYunluo \
+	SystemUIOverlayYunluo \
     WifiResOverlayYunluo
 
 # Init files

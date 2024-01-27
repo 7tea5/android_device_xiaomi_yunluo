@@ -8,6 +8,12 @@ LOCAL_OVERRIDES_PACKAGES := \
    CarrierServices \
    Dialer \
    GoogleDialer \
+   Messaging \
+   Messages \
+   GoogleMessages \
+   Maps \
+   GoogleMaps \
+   Safety \
    Stk \
    TeleService \
    Telecom \
@@ -15,7 +21,10 @@ LOCAL_OVERRIDES_PACKAGES := \
    com.google.android.dialer.support \
    com.android.phone.common \
    DevicePersonalizationPrebuiltPixel2020 \
-   messaging
+   AndroidAuto \
+   Gearhead \
+   PersonalSafety \
+   SafetyHub
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED
