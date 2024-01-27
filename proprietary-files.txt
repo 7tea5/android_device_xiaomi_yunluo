@@ -540,9 +540,6 @@ vendor/firmware/soc_fm_v1_patch.bin
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
 
-# FM Radio
--system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
-
 # Gatekeeper
 -vendor/lib64/hw/gatekeeper.beanpod.so
 -vendor/lib64/hw/libSoftGatekeeper.so

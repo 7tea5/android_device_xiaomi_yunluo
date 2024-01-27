@@ -37,7 +37,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=$(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE) \
     POSTINSTALL_OPTIONAL_vendor=true
 
-# Dynamic partitions
+# Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Virtual A/B
@@ -255,6 +255,12 @@ PRODUCT_PACKAGES += \
 	libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Permissions
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
@@ -302,7 +308,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Overlays
+# RRO
 PRODUCT_PACKAGES += \
 	FrameworksResOverlayYunluo \
     SettingsOverlayYunluo \
