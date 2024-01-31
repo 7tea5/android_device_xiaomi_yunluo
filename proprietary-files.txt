@@ -608,6 +608,21 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/mt6789/libdpframework.so
 -vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
+# AiAi
+product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk;PRESIGNED
+product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
+
+# HubUI
+product/etc/appcompat/compat_framework_overrides.xml
+product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+product/etc/permissions/com.google.assistant.hubui.xml
+product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
+
+# Permissions
+product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/pixel_tablet_experience_2023.xml
+
 # Keymaster
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 -vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc

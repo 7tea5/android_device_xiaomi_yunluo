@@ -4,6 +4,23 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
+
+BOARD_WITHOUT_RADIO := true
+
+# Disable camera flash and autofocus related xml with a disable flag.
+DISABLE_CAMERA_FS_AF := true
+
+# Disable baro, prox, hifi sensor related xml with a disable flag.
+DISABLE_SENSOR_BARO_PROX_HIFI := true
+
+# Identify the device type.
+# to have tablet COD setting
+USE_TABLET_BT_COD := true
+
+# Disable telephony euicc related xml with a disable flag.
+DISABLE_TELEPHONY_EUICC := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -144,12 +161,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
-# Keymaster / Keymint
-PRODUCT_PACKAGES += \
-	libkeymaster_messages.vendor:64 \
-	libkeymaster_portable.vendor:64 \
-	libkeymint.vendor:64 \
-	libpuresoftkeymasterdevice.vendor:64
+# GMS
+WITH_GMS_COMMS_SUITE := false
 
 # Health
 PRODUCT_PACKAGES += \
@@ -161,6 +174,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libhidltransport.vendor:64 \
 	libhwbinder.vendor
+
+# Keymaster / Keymint
+PRODUCT_PACKAGES += \
+	libkeymaster_messages.vendor:64 \
+	libkeymaster_portable.vendor:64 \
+	libkeymint.vendor:64 \
+	libpuresoftkeymasterdevice.vendor:64
 
 # Lights
 PRODUCT_PACKAGES += \
