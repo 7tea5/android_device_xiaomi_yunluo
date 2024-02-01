@@ -5,5 +5,5 @@
      <application android:hasCode="false" />
 
      <overlay 
-          android:targetPackage="com.android.settings" >
+          android:targetPackage="com.android.settings" android:isStatic="true" android:priority="300"/>
 </manifest>

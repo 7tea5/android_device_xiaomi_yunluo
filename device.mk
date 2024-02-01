@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_RECOVERY_DEFAULT_ROTATION := ROTATION_LEFT
-
 BOARD_WITHOUT_RADIO := true
 
 # Disable camera flash and autofocus related xml with a disable flag.
