@@ -31,6 +31,7 @@ ro.vendor.audio.surround.support=true
 
 # Camera
 camera.disable_zsl_mode=1
+persist.vendor.camera.facetracker.support=1
 persist.vendor.camera3.pipeline.bufnum.base.imgo=4
 persist.vendor.camera3.pipeline.bufnum.base.lcso=4
 persist.vendor.camera3.pipeline.bufnum.base.rrzo=4
@@ -106,9 +107,10 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.primary_display_orientation=ORIENTATION_180
 ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_idle_timer_ms=3000
-ro.surface_flinger.set_touch_timer_ms=3000
+ro.surface_flinger.set_idle_timer_ms=1100
+ro.surface_flinger.set_touch_timer_ms=1100
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
+ro.vendor.hbm_backlight.enable=false
 vendor.hbm.enable=false
 ro.minui.default_rotation=ROTATION_DOWN
 debug.sf.enable_transaction_tracing=false

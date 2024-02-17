@@ -4,9 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-
 # Inherit some common AwakenOS Stuff
-TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/awaken/config/common_full_tablet_wifionly.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
@@ -23,9 +21,7 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Pad
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
+#PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="missi_pad_global-user 13 TP1A.220624.014 V14.0.4.0.TLYMIXM release-keys"
 	
-BUILD_FINGERPRINT := Xiaomi/missi_pad_global/missi:13/TP1A.220624.014/V14.0.4.0.TLYMIXM:user/release-keys
+#BUILD_FINGERPRINT := Xiaomi/missi_pad_global/missi:13/TP1A.220624.014/V14.0.4.0.TLYMIXM:user/release-keys

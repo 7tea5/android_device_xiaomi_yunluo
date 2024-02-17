@@ -1,5 +1,11 @@
+# Data files
+/data/vendor/dolby(/.*)?                                             u:object_r:vendor_data_file:s0
+
 # Graphics
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)?         u:object_r:vendor_sysfs_displayfeature:s0
+
+# HALs
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service   u:object_r:hal_dms_default_exec:s0
 
 # Health
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.mt6789 u:object_r:hal_health_default_exec:s0

@@ -7,17 +7,26 @@
 BOARD_WITHOUT_RADIO := true
 
 # Disable camera flash and autofocus related xml with a disable flag.
-DISABLE_CAMERA_FS_AF := true
+#DISABLE_CAMERA_FS_AF := true
 
 # Disable baro, prox, hifi sensor related xml with a disable flag.
-DISABLE_SENSOR_BARO_PROX_HIFI := true
+#DISABLE_SENSOR_BARO_PROX_HIFI := true
 
 # Identify the device type.
 # to have tablet COD setting
-USE_TABLET_BT_COD := true
+#USE_TABLET_BT_COD := true
 
 # Disable telephony euicc related xml with a disable flag.
 DISABLE_TELEPHONY_EUICC := true
+
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUITitan  # For tablet
+
+# Inherit Window Extensions
+PRODUCT_PACKAGES += \
+    androidx.window.extensions
+	
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # A/B
 AB_OTA_UPDATER := true
@@ -84,9 +93,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_CHARACTERISTICS := tablet
 TARGET_SCREEN_HEIGHT := 2000
 TARGET_SCREEN_WIDTH := 1200
-
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 440dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Audio
@@ -160,7 +167,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # GMS
-WITH_GMS_COMMS_SUITE := false
+#WITH_GMS_COMMS_SUITE := false
 
 # Health
 PRODUCT_PACKAGES += \
@@ -324,7 +331,7 @@ PRODUCT_COPY_FILES += \
 
 # Remove packages
 PRODUCT_PACKAGES += \
-    RemovePackages
+    $(LOCAL_PATH)/configs/omitpackages
 
 # RRO
 PRODUCT_PACKAGES += \
@@ -332,7 +339,11 @@ PRODUCT_PACKAGES += \
     SettingsOverlayYunluo \
 	SettingsResOverlayYunluo \
 	SystemUIOverlayYunluo \
-    WifiResOverlayYunluo
+	TitanSettingsOverlay \
+	TitanSettingsProviderOverlay \
+	TitanSysuiConfigOverlay \
+    WifiResOverlayYunluo \
+	YunluoGMSOverlay
 
 # Init files
 PRODUCT_PACKAGES += \
@@ -365,8 +376,37 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Media
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libOmxVidcCommon \
+    libstagefrighthw \
+    libavservices_minijail_vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
+
 PRODUCT_COPY_FILES += \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
 # Public libraries
 PRODUCT_COPY_FILES += \

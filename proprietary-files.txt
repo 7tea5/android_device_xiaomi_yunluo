@@ -11,10 +11,13 @@
 -vendor/lib/libaedv.so
 -vendor/lib64/libaedv.so
 
+# Ai
+product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
+
 # APU
--vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
--vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
--vendor/etc/vintf/manifest/manifest_apuware_utils.xml
+-vendor/etc/vintf/manifest/manifest_apuware_apusys.xml;MODULE=manifest_apuware_apusys.xml
+-vendor/etc/vintf/manifest/manifest_apuware_hmp.xml;MODULE=manifest_apuware_hmp.xml
+-vendor/etc/vintf/manifest/manifest_apuware_utils.xml;MODULE=manifest_apuware_utils.xml
 -vendor/lib64/APUWareApusysServer.so
 -vendor/lib64/APUWareHmpServer.so
 -vendor/lib64/APUWareUtilsServer.so
@@ -186,7 +189,7 @@
 # Camera
 -vendor/bin/hw/mt6789/camerahalserver
 -vendor/etc/init/camerahalserver.rc
--vendor/etc/vintf/manifest/manifest_cameraprovider.xml
+-vendor/etc/vintf/manifest/manifest_cameraprovider.xml;MODULE=manifest_cameraprovider.xml
 -vendor/lib64/hdr_capture.so
 -vendor/lib64/hdr_preview.so
 -vendor/lib64/hq_algoutils.so
@@ -475,10 +478,18 @@
 -vendor/etc/camera/morpho_lowlight_tuning_params_rear_zoom.xml
 -vendor/etc/default_pd_calibration.bin
 
+# Cast
+product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+product/etc/permissions/com.google.android.apps.mediashell.xml
+product/etc/permissions/com.google.android.apps.nest.castauth.xml
+product/etc/sysconfig/communal.xml
+product/priv-app/AndroidMediaShell/AndroidMediaShell.apk;PRESIGNED
+product/priv-app/CastAuthPrebuilt/CastAuthPrebuilt.apk;PRESIGNED
+
 # DRM (Digital Rights Management)
 -vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 -vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml;MODULE=manifest_android.hardware.drm@1.4-service.widevine.xml
 -vendor/lib/liboemcrypto.so
 -vendor/lib/libtlcWidevineModularDrm.so
 -vendor/lib/liburee_meta_drmkeyinstall.so
@@ -501,6 +512,35 @@
 -vendor/etc/dsi_l83_44_02_0b_cphy_vdo_mi.xml
 -vendor/etc/dsi_l83_44_02_0c_cphy_vdo_mi.xml
 -vendor/etc/screen_light.xml
+
+# Dock
+product/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml
+product/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/pixel_docking_experience_2022.xml
+product/priv-app/DockManagerPrebuilt/DockManagerPrebuilt.apk;PRESIGNED
+product/priv-app/PrebuiltGmsCore/m/optional/HomegraphPrebuilt.apk:product/priv-app/HomegraphPrebuilt/HomegraphPrebuilt.apk;PRESIGNED
+product/priv-app/PrebuiltGmsCore/m/optional/UsoniaPrebuilt.apk:product/priv-app/UsoniaPrebuilt/UsoniaPrebuilt.apk;PRESIGNED
+system_ext/priv-app/DockSetup/DockSetup.apk;PRESIGNED
+
+#Dolby
+-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
+vendor/etc/dolby/dax-default.xml
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml;MODULE=manifest_vendor.dolby.hardware.dms.xml
+-vendor/lib/libdapparamstorage.so
+-vendor/lib/libdeccfg.so
+-vendor/lib/libstagefrightdolby.so
+-vendor/lib/libstagefright_soft_ac4dec.so
+-vendor/lib/libstagefright_soft_ddpdec.so
+-vendor/lib/soundfx/libswgamedap.so
+-vendor/lib/soundfx/libswvqe.so
+-vendor/lib/vendor.dolby.hardware.dms@2.0.so
+-vendor/lib64/libdapparamstorage.so
+-vendor/lib64/libdlbdsservice.so
+-vendor/lib64/libstagefrightdolby.so
+-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
+-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
 # Firmware
 vendor/firmware/BT_FW.cfg
@@ -540,6 +580,17 @@ vendor/firmware/soc_fm_v1_patch.bin
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
 
+# Hotword
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
+# HubUI
+product/etc/appcompat/compat_framework_overrides.xml
+product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+product/etc/permissions/com.google.assistant.hubui.xml
+product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
+system_ext/priv-app/SystemUITitan/SystemUITitan.apk;PRESIGNED
+
 # Gatekeeper
 -vendor/lib64/hw/gatekeeper.beanpod.so
 -vendor/lib64/hw/libSoftGatekeeper.so
@@ -548,7 +599,7 @@ vendor/firmware/wifi.cfg
 -vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 -vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 -vendor/etc/meow.cfg
--vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml;MODULE=manifest_hwcomposer.xml
 vendor/lib/egl/egl.cfg
 -vendor/lib/egl/libGLES_meow.so
 -vendor/lib/egl/libMEOW_data.so
@@ -608,21 +659,6 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/mt6789/libdpframework.so
 -vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
-# AiAi
-product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk;PRESIGNED
-product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
-
-# HubUI
-product/etc/appcompat/compat_framework_overrides.xml
-product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
-product/etc/permissions/com.google.assistant.hubui.xml
-product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
-
-# Permissions
-product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
-product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
-product/etc/sysconfig/pixel_tablet_experience_2023.xml
-
 # Keymaster
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
 -vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
@@ -632,10 +668,10 @@ product/etc/sysconfig/pixel_tablet_experience_2023.xml
 
 # Keymint
 -vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod
--vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml
+vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
+vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml;MODULE=android.hardware.security.keymint-service.beanpod.xml
+vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml;MODULE=android.hardware.security.secureclock-service.beanpod.xml
+vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml;MODULE=android.hardware.security.sharedsecret-service.beanpod.xml
 
 # KMSetkey
 -vendor/bin/bp_kmsetkey_ca
@@ -690,7 +726,7 @@ product/etc/sysconfig/pixel_tablet_experience_2023.xml
 -vendor/etc/VideoLog_dynamic.xml
 -vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 -vendor/etc/mtk_platform_codecs_config.xml
--vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
+vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml;MODULE=manifest_media_c2_V1_2_default.xml
 -vendor/lib64/libcodec2_mtk_c2store.so
 -vendor/lib64/libcodec2_mtk_vdec.so
 -vendor/lib64/libcodec2_mtk_venc.so
@@ -860,8 +896,8 @@ product/etc/sysconfig/pixel_tablet_experience_2023.xml
 -vendor/bin/muxreport
 -vendor/bin/rcs_volte_stack
 -vendor/etc/MNL_Config.xml
--vendor/etc/apdb/APDB_MT6789___W2224
--vendor/etc/apdb/APDB_MT6789___W2224_ENUM
+-vendor/etc/apdb/APDB_MT6789___W2233
+-vendor/etc/apdb/APDB_MT6789___W2233_ENUM
 -vendor/etc/ecc_list.xml
 -vendor/etc/ecc_list_OP01.xml
 -vendor/etc/ecc_list_OP02.xml
@@ -943,6 +979,25 @@ product/etc/sysconfig/pixel_tablet_experience_2023.xml
 -vendor/lib64/libvow_ap_test_ha.so
 -vendor/lib64/libvow_ap_test_hh.so
 -vendor/lib64/libvow_ap_test_nn.so
+
+# Permissions
+product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/kids_home_experience.xml
+product/etc/sysconfig/nexus.xml
+product/etc/sysconfig/pixel_experience_2017.xml
+product/etc/sysconfig/pixel_experience_2018.xml
+product/etc/sysconfig/pixel_experience_2019.xml
+product/etc/sysconfig/pixel_experience_2019_midyear.xml
+product/etc/sysconfig/pixel_experience_2020.xml
+product/etc/sysconfig/pixel_experience_2020_midyear.xml
+product/etc/sysconfig/pixel_experience_2021.xml
+product/etc/sysconfig/pixel_experience_2021_midyear.xml
+product/etc/sysconfig/pixel_experience_2022.xml
+product/etc/sysconfig/pixel_experience_2022_midyear.xml
+product/etc/sysconfig/pixel_tablet_experience_2023.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
 # TEE
 -vendor/bin/teei_daemon

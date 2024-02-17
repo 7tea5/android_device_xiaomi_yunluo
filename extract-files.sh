@@ -26,8 +26,8 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Default to sanitizing the vendor folder before extraction
-CLEAN_VENDOR=true
+# Default to not sanitizing the vendor folder before extraction
+CLEAN_VENDOR=false
 
 KANG=
 SECTION=
