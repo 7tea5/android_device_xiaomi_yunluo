@@ -12,9 +12,9 @@
 -vendor/lib64/libaedv.so
 
 # APU
--vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
--vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
--vendor/etc/vintf/manifest/manifest_apuware_utils.xml
+-vendor/etc/vintf/manifest/manifest_apuware_apusys.xml;MODULE=manifest_apuware_apusys.xml
+-vendor/etc/vintf/manifest/manifest_apuware_hmp.xml;MODULE=manifest_apuware_hmp.xml
+-vendor/etc/vintf/manifest/manifest_apuware_utils.xml;MODULE=manifest_apuware_utils.xml
 -vendor/lib64/APUWareApusysServer.so
 -vendor/lib64/APUWareHmpServer.so
 -vendor/lib64/APUWareUtilsServer.so
@@ -186,7 +186,7 @@
 # Camera
 -vendor/bin/hw/mt6789/camerahalserver
 -vendor/etc/init/camerahalserver.rc
--vendor/etc/vintf/manifest/manifest_cameraprovider.xml
+-vendor/etc/vintf/manifest/manifest_cameraprovider.xml;MODULE=manifest_cameraprovider.xml
 -vendor/lib64/hdr_capture.so
 -vendor/lib64/hdr_preview.so
 -vendor/lib64/hq_algoutils.so
@@ -478,7 +478,7 @@
 # DRM (Digital Rights Management)
 -vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 -vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml;MODULE=manifest_android.hardware.drm@1.4-service.widevine.xml
 -vendor/lib/liboemcrypto.so
 -vendor/lib/libtlcWidevineModularDrm.so
 -vendor/lib/liburee_meta_drmkeyinstall.so
@@ -551,7 +551,7 @@ vendor/firmware/wifi.cfg
 -vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789
 -vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 -vendor/etc/meow.cfg
--vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+-vendor/etc/vintf/manifest/manifest_hwcomposer.xml;MODULE=manifest_hwcomposer.xml
 vendor/lib/egl/egl.cfg
 -vendor/lib/egl/libGLES_meow.so
 -vendor/lib/egl/libMEOW_data.so
@@ -621,9 +621,9 @@ vendor/lib/egl/egl.cfg
 # Keymint
 -vendor/bin/hw/android.hardware.security.keymint@1.0-service.beanpod
 -vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
--vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml
--vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.beanpod.xml;MODULE=android.hardware.security.keymint-service.beanpod.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.beanpod.xml;MODULE=android.hardware.security.secureclock-service.beanpod.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.beanpod.xml;MODULE=android.hardware.security.sharedsecret-service.beanpod.xml
 
 # KMSetkey
 -vendor/bin/bp_kmsetkey_ca
@@ -678,7 +678,7 @@ vendor/lib/egl/egl.cfg
 -vendor/etc/VideoLog_dynamic.xml
 -vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 -vendor/etc/mtk_platform_codecs_config.xml
--vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
+-vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml;MODULE=manifest_media_c2_V1_2_default.xml
 -vendor/lib64/libcodec2_mtk_c2store.so
 -vendor/lib64/libcodec2_mtk_vdec.so
 -vendor/lib64/libcodec2_mtk_venc.so
