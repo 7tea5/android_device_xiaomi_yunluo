@@ -21,10 +21,6 @@ DISABLE_TELEPHONY_EUICC := true
 
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUITitan  # For tablet
-
-# Inherit Window Extensions
-PRODUCT_PACKAGES += \
-    androidx.window.extensions
 	
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
