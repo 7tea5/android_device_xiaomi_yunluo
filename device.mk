@@ -6,6 +6,16 @@
 
 BOARD_WITHOUT_RADIO := true
 
+# Disable camera flash and autofocus related xml with a disable flag.
+#DISABLE_CAMERA_FS_AF := true
+
+# Disable baro, prox, hifi sensor related xml with a disable flag.
+#DISABLE_SENSOR_BARO_PROX_HIFI := true
+
+# Identify the device type.
+# to have tablet COD setting
+#USE_TABLET_BT_COD := true
+
 # Disable telephony euicc related xml with a disable flag.
 DISABLE_TELEPHONY_EUICC := true
 
