@@ -381,8 +381,8 @@ on post-fs-data
 
     
     # FM
-    chown system system /sys/class/fm/fm/lan_enable
-    chmod 0660 /sys/class/fm/fm/lan_enable
+    #chown system system /sys/class/fm/fm/lan_enable
+    #chmod 0660 /sys/class/fm/fm/lan_enable
 
     # JPEG
     chmod 0666 /proc/mtk_jpeg

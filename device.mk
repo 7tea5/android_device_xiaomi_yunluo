@@ -147,7 +147,7 @@ PRODUCT_PACKAGES += \
 
 
 # FM Radio
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     FMRadio
 
 # Gatekeeper

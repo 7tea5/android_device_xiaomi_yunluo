@@ -153,8 +153,8 @@ ro.vendor.mtk_widevine_drm_l1_support=1
 ro.mtk_key_manager_support=1
 
 # FMRadio
-ro.vendor.builtin_fm_antenna_support=1
-ro.vendor.fm.platform=mt6631_6635
+#ro.vendor.builtin_fm_antenna_support=1
+#ro.vendor.fm.platform=mt6631_6635
 
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
