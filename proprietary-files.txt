@@ -11,6 +11,9 @@
 -vendor/lib/libaedv.so
 -vendor/lib64/libaedv.so
 
+# Ai
+product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
+
 # APU
 -vendor/etc/vintf/manifest/manifest_apuware_apusys.xml;MODULE=manifest_apuware_apusys.xml
 -vendor/etc/vintf/manifest/manifest_apuware_hmp.xml;MODULE=manifest_apuware_hmp.xml
@@ -491,6 +494,14 @@
 -vendor/lib64/libwvkeybox.so
 -vendor/lib64/mediadrm/libwvdrmengine.so;REPLACEDEP=libprotobuf-cpp-full-3.9.1:libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# Cast
+product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+product/etc/permissions/com.google.android.apps.mediashell.xml
+product/etc/permissions/com.google.android.apps.nest.castauth.xml
+product/etc/sysconfig/communal.xml
+product/priv-app/AndroidMediaShell/AndroidMediaShell.apk;PRESIGNED
+product/priv-app/CastAuthPrebuilt/CastAuthPrebuilt.apk;PRESIGNED
+
 # Display configs
 -vendor/etc/AbnormalDisplayLog_dynamic.xml
 -vendor/etc/cust_color.xml
@@ -501,6 +512,15 @@
 -vendor/etc/dsi_l83_44_02_0b_cphy_vdo_mi.xml
 -vendor/etc/dsi_l83_44_02_0c_cphy_vdo_mi.xml
 -vendor/etc/screen_light.xml
+
+# Dock
+product/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml
+product/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/pixel_docking_experience_2022.xml
+product/priv-app/DockManagerPrebuilt/DockManagerPrebuilt.apk;PRESIGNED
+product/priv-app/PrebuiltGmsCore/m/optional/HomegraphPrebuilt.apk:product/priv-app/HomegraphPrebuilt/HomegraphPrebuilt.apk;PRESIGNED
+product/priv-app/PrebuiltGmsCore/m/optional/UsoniaPrebuilt.apk:product/priv-app/UsoniaPrebuilt/UsoniaPrebuilt.apk;PRESIGNED
+system_ext/priv-app/DockSetup/DockSetup.apk;PRESIGNED
 
 # Firmware
 vendor/firmware/BT_FW.cfg
@@ -610,6 +630,17 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/mt6789/libaiselector.so
 -vendor/lib64/mt6789/libdpframework.so
 -vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
+
+# Hotword
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
+# HubUI
+product/etc/appcompat/compat_framework_overrides.xml
+product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
+product/etc/permissions/com.google.assistant.hubui.xml
+product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
+system_ext/priv-app/SystemUITitan/SystemUITitan.apk;PRESIGNED
 
 # Keymaster
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
@@ -805,6 +836,24 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/libnvram_sec.so
 -vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 -vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
+
+# Permissions
+product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
+system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/kids_home_experience.xml
+product/etc/sysconfig/nexus.xml
+product/etc/sysconfig/pixel_experience_2017.xml
+product/etc/sysconfig/pixel_experience_2018.xml
+product/etc/sysconfig/pixel_experience_2019.xml
+product/etc/sysconfig/pixel_experience_2019_midyear.xml
+product/etc/sysconfig/pixel_experience_2020.xml
+product/etc/sysconfig/pixel_experience_2020_midyear.xml
+product/etc/sysconfig/pixel_experience_2021.xml
+product/etc/sysconfig/pixel_experience_2021_midyear.xml
+product/etc/sysconfig/pixel_experience_2022.xml
+product/etc/sysconfig/pixel_experience_2022_midyear.xml
+product/etc/sysconfig/pixel_tablet_experience_2023.xml
 
 # Picture Quality
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
