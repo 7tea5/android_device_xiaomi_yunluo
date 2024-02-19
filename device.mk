@@ -9,6 +9,9 @@ BOARD_WITHOUT_RADIO := true
 # Disable telephony euicc related xml with a disable flag.
 DISABLE_TELEPHONY_EUICC := true 
 
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For tablet
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -72,6 +75,10 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # AAPT
 PRODUCT_CHARACTERISTICS := tablet
+TARGET_SCREEN_HEIGHT := 2000
+TARGET_SCREEN_WIDTH := 1200
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
@@ -259,6 +266,12 @@ PRODUCT_PACKAGES += \
 	libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Permissions
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
@@ -302,11 +315,21 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
 	frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Overlays
+# Remove packages
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/configs/omitpackages
+
+# RRO
 PRODUCT_PACKAGES += \
 	FrameworksResOverlayYunluo \
-    SettingsResOverlayYunluo \
-    WifiResOverlayYunluo
+    SettingsOverlayYunluo \
+	SettingsResOverlayYunluo \
+	SystemUIOverlayYunluo \
+	TitanSettingsOverlay \
+	TitanSettingsProviderOverlay \
+	TitanSysuiConfigOverlay \
+    WifiResOverlayYunluo \
+	YunluoGMSOverlay
 
 # Init files
 PRODUCT_PACKAGES += \
