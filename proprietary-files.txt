@@ -640,7 +640,6 @@ product/etc/appcompat/compat_framework_overrides.xml
 product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml
 product/etc/permissions/com.google.assistant.hubui.xml
 product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
-system_ext/priv-app/SystemUITitan/SystemUITitan.apk;PRESIGNED
 
 # Keymaster
 -vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
