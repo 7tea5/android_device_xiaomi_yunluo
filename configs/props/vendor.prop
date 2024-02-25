@@ -159,7 +159,7 @@ ro.mtk_key_manager_support=1
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
 
-#GNSS
+# GNSS
 persist.vendor.xfrm_support=1
 ro.vendor.gps.chrdev=gps_drv_stp
 ro.vendor.mtk_gps_support=0
@@ -251,7 +251,7 @@ init.userspace_reboot.is_supported=true
 
 # SurfaceFlinger
 debug.renderengine.backend=skiaglthreaded
-debug.sf.disable_backpressure=1
+debug.sf.enable_gl_backpressure=1
 debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
@@ -284,6 +284,8 @@ ro.surface_flinger.uclamp.min=130
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
 ro.vendor.composer_version=2.1
 vendor.debug.sf.cpupolicy.base_min_bl=310
 vendor.debug.sf.cpupolicy.hw_comp_suspend=1
