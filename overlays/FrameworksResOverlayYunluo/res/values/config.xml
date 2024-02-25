@@ -29,13 +29,13 @@
          If a non-zero value is set for config_defaultPeakRefreshRate, then
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultRefreshRate">121</integer>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
              the framework from using higher refresh rates, even if display modes with higher refresh
              rates are available from hardware composer. Only has an effect if the value is
              non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">90</integer>
+    <integer name="config_defaultPeakRefreshRate">121</integer>
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
     in hardware. Required for "Night Light" support-->
@@ -486,4 +486,18 @@
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
+
+    <item type="dimen" name="config_screenBrightnessSettingDefaultFloat">0.4</item>
+    <item type="dimen" name="config_screenBrightnessSettingMaximumFloat">1.0</item>
+    <item type="dimen" name="config_screenBrightnessSettingMinimumFloat">0.0</item>
+
+    <bool name="config_dozeAfterScreenOff">true</bool>
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_supportsCamToggle">true</bool>
+    <bool name="config_supportsMicToggle">true</bool>
+
+    <string-array name="config_biometric_sensors">
+        <item>0:2:15</item>
+    </string-array>
 </resources>

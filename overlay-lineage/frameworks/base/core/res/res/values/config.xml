@@ -25,59 +25,6 @@
     <!-- Whether changing sensor privacy SW setting requires device to be unlocked -->
     <bool name="config_sensorPrivacyRequiresAuthentication">false</bool>
 
-    <!-- Whether enabling rotation compat policy for immersive apps that prevents auto rotation
-         into non-optimal screen orientation while in fullscreen. This is needed because immersive
-         apps, such as games, are often not optimized for all orientations and can have a poor UX
-         when rotated. Additionally, some games rely on sensors for the gameplay so users can
-         trigger such rotations accidentally when auto rotation is on.
-         Applicable only if ignoreOrientationRequest is enabled. -->
-    <bool name="config_letterboxIsDisplayRotationImmersiveAppCompatPolicyEnabled">true</bool>
-
-    <!-- Whether displaying letterbox education is enabled for letterboxed fullscreen apps. -->
-    <bool name="config_letterboxIsEducationEnabled">true</bool>
-
-    <!-- Whether the specific behaviour for translucent activities letterboxing is enabled.
-         TODO(b/255532890) Enable when ignoreOrientationRequest is set -->
-    <bool name="config_letterboxIsEnabledForTranslucentActivities">true</bool>
-
-    <!-- Whether horizontal reachability repositioning is allowed for letterboxed fullscreen apps.
-    -->
-    <bool name="config_letterboxIsHorizontalReachabilityEnabled">true</bool>
-
-    <!-- Whether should ignore app requested orientation in response to an app
-         calling Activity#setRequestedOrientation. See
-         LetterboxUiController#shouldIgnoreRequestedOrientation for details. -->
-    <bool name="config_letterboxIsPolicyForIgnoringRequestedOrientationEnabled">true</bool>
-
-    <!-- Whether using split screen aspect ratio as a default aspect ratio for unresizable apps. -->
-    <bool name="config_letterboxIsSplitScreenAspectRatioForUnresizableAppsEnabled">true</bool>
-
-    <!-- Whether vertical reachability repositioning is allowed for letterboxed fullscreen apps. -->
-    <bool name="config_letterboxIsVerticalReachabilityEnabled">true</bool>
-
-    <!-- If true, show multiuser switcher by default unless the user specifically disables it. -->
-    <bool name="config_showUserSwitcherByDefault">true</bool>
-
-    <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">3</integer>
-
-    <!-- Corners radius for activity presented the letterbox mode. Values < 0 enable rounded
-         corners with radius equal to min between device bottom corner radii. Default 0 value turns
-         off rounded corners logic in LetterboxUiController. -->
-    <integer name="config_letterboxActivityCornersRadius">-1</integer>
-
-    <!-- Aspect ratio of letterboxing for fixed orientation. Values <= 1.0 will be ignored.
-         Note: Activity min/max aspect ratio restrictions will still be respected.
-         Therefore this override can control the maximum screen area that can be occupied by
-         the app in the letterbox mode. -->
-    <item name="config_fixedOrientationLetterboxAspectRatio" format="float" type="dimen">1.33</item>
-
-    <!-- Vertical position of a center of the letterboxed app window.
-        0 corresponds to the upper side of the screen and 1 to the lower side. If given value < 0
-        or > 1 it is ignored and for non-tabletop mode central position is used (0.5); for
-         tabletop mode top (0.0) is used. -->
-    <item name="config_letterboxVerticalPositionMultiplier" format="float" type="dimen">0.5</item>
-
     <!-- Default value for Settings.ASSIST_TOUCH_GESTURE_ENABLED -->
     <bool name="config_assistTouchGestureEnabledDefault">false</bool>
 

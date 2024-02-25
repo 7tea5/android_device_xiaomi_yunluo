@@ -18,6 +18,7 @@
     <!-- About device screen, build maintainer -->
     <string name="build_device_url">https://t.me/RedmiPadOfficial</string>
     <string name="build_maintainer_summary">fivegg</string>
+    <string name="build_maintainer_donate_url">https://t.me/RedmiPadOfficial</string>
     
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">true</bool>
@@ -33,4 +34,30 @@
 
     <!-- Whether or not emergency info tile should display in device info page -->
     <bool name="config_show_emergency_info_in_device_info">false</bool>
+
+    <!-- Whether or not to show Media vibration settings in the vibration and haptics screen.
+         Can be overridden for specific product builds if the target device does not support it -->
+    <bool name="config_media_vibration_supported">false</bool>
+
+    <!-- Whether call_volume should be shown or not. -->
+    <bool name="config_show_call_volume">false</bool>
+
+    <!-- Whether premium_sms should be shown or not. -->
+    <bool name="config_show_premium_sms">false</bool>
+
+    <!-- Whether data_saver should be shown or not. -->
+    <bool name="config_show_data_saver">false</bool>
+
+    <!-- Whether to show communal settings at the top level. -->
+    <bool name="config_show_communal_settings">true</bool>
+
+    <!-- Whether sim related information is visible to the end user. -->
+    <bool name="config_show_sim_info">false</bool>
+
+    <!-- Whether the toggle for Auto-rotate with Face Detection should be shown. -->
+    <bool name="config_auto_rotate_face_detection_available">false</bool>
+
+    <!-- Whether to show Smooth Display feature in Settings Options -->
+    <bool name="config_show_smooth_display">true</bool>
+
 </resources>
