@@ -839,20 +839,20 @@ product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk;PRESIGNED
 # Permissions
 product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
 system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
-product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
-product/etc/sysconfig/kids_home_experience.xml
-product/etc/sysconfig/nexus.xml
-product/etc/sysconfig/pixel_experience_2017.xml
-product/etc/sysconfig/pixel_experience_2018.xml
-product/etc/sysconfig/pixel_experience_2019.xml
-product/etc/sysconfig/pixel_experience_2019_midyear.xml
-product/etc/sysconfig/pixel_experience_2020.xml
-product/etc/sysconfig/pixel_experience_2020_midyear.xml
-product/etc/sysconfig/pixel_experience_2021.xml
-product/etc/sysconfig/pixel_experience_2021_midyear.xml
-product/etc/sysconfig/pixel_experience_2022.xml
-product/etc/sysconfig/pixel_experience_2022_midyear.xml
-product/etc/sysconfig/pixel_tablet_experience_2023.xml
+#product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+#product/etc/sysconfig/kids_home_experience.xml
+#product/etc/sysconfig/nexus.xml
+#product/etc/sysconfig/pixel_experience_2017.xml
+#product/etc/sysconfig/pixel_experience_2018.xml
+#product/etc/sysconfig/pixel_experience_2019.xml
+#product/etc/sysconfig/pixel_experience_2019_midyear.xml
+#product/etc/sysconfig/pixel_experience_2020.xml
+#product/etc/sysconfig/pixel_experience_2020_midyear.xml
+#product/etc/sysconfig/pixel_experience_2021.xml
+#product/etc/sysconfig/pixel_experience_2021_midyear.xml
+#product/etc/sysconfig/pixel_experience_2022.xml
+#product/etc/sysconfig/pixel_experience_2022_midyear.xml
+#product/etc/sysconfig/pixel_tablet_experience_2023.xml
 
 # Picture Quality
 -vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service

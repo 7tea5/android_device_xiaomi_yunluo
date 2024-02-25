@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/awaken_yunluo.mk
+	$(LOCAL_DIR)/evolution_yunluo.mk
 
 COMMON_LUNCH_CHOICES := \
-    $(foreach FLAVOR, user userdebug eng, awaken_yunluo-$(FLAVOR))
+    $(foreach FLAVOR, user userdebug eng, evolution_yunluo-$(FLAVOR))
