@@ -159,6 +159,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
+# GMS
+WITH_GMS_COMMS_SUITE := false
+
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
 	libkeymaster_messages.vendor:64 \
