@@ -6,8 +6,12 @@
 
 BOARD_WITHOUT_RADIO := true
 
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For tablet
+# Preopt critical applications
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+	NexusLauncherRelease \
+	Settings \
+	SystemUI \
+	SystemUIGoogle
 
 # A/B
 AB_OTA_UPDATER := true
