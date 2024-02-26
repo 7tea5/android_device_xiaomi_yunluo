@@ -12,7 +12,7 @@
 -vendor/lib64/libaedv.so
 
 # Ai
-product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
+#product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk;PRESIGNED
 
 # APU
 -vendor/etc/vintf/manifest/manifest_apuware_apusys.xml;MODULE=manifest_apuware_apusys.xml
@@ -632,8 +632,8 @@ vendor/lib/egl/egl.cfg
 -vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Hotword
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+#system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+#system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # HubUI
 product/etc/appcompat/compat_framework_overrides.xml
