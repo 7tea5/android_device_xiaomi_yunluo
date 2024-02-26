@@ -6,9 +6,6 @@
 
 BOARD_WITHOUT_RADIO := true
 
-# Disable telephony euicc related xml with a disable flag.
-DISABLE_TELEPHONY_EUICC := true 
-
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For tablet
 
