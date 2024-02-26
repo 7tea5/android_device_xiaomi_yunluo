@@ -5,26 +5,31 @@ LOCAL_MODULE := RemovePackages
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
+   AndroidAuto \
+   Camera2 \
    CarrierServices \
+   DevicePersonalizationPrebuiltPixel2020 \
    Dialer \
+   FilesPrebuilt \
+   Gearhead \
+   GoogleContacts \
    GoogleDialer \
-   Messaging \
-   Messages \
-   GoogleMessages \
-   Maps \
    GoogleMaps \
+   GoogleMessages \
+   KidsSpace \
+   Maps \
+   Messages \
+   Messaging \
+   PersonalSafety \
+   Pixel Buds \
+   PixelBudsControl 
    Safety \
+   SafetyHub \
    Stk \
    TeleService \
    Telecom \
-   GoogleContacts \
-   com.google.android.dialer.support \
    com.android.phone.common \
-   DevicePersonalizationPrebuiltPixel2020 \
-   AndroidAuto \
-   Gearhead \
-   PersonalSafety \
-   SafetyHub
+   com.google.android.dialer.support \
 
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_CERTIFICATE := PRESIGNED

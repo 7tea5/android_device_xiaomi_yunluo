@@ -331,7 +331,7 @@ PRODUCT_COPY_FILES += \
 
 # Remove packages
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/configs/omitpackages
+    RemovePackages
 
 # RRO
 PRODUCT_PACKAGES += \
