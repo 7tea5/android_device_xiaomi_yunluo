@@ -6,7 +6,6 @@
 runtime_resource_overlay {
     name: "SettingsResOverlayYunluo",
     sdk_version: "current",
-    vendor: true,
-    resource_dirs: ["res"]
+    product_specific: true,
 }
 

@@ -7,6 +7,5 @@
 runtime_resource_overlay {
     name: "FrameworksResOverlayYunluo",
     sdk_version: "current",
-    vendor: true,
-    resource_dirs: ["res"]
+    product_specific: true,
 }
