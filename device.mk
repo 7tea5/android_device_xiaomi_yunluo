@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
 	android.hardware.camera.provider@2.5.vendor:64 \
 	android.hardware.camera.provider@2.6.vendor:64 \
 
+PRODUCT_PACKAGES += \
+    Aperture
+	
 # Device features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
