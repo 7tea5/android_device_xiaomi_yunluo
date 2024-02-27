@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
 	android.hardware.camera.provider@2.6.vendor:64 \
 
 PRODUCT_PACKAGES += \
-    Aperture
+    GCamGOPrebuilt-V4
 	
 # Device features
 PRODUCT_COPY_FILES += \
