@@ -176,6 +176,10 @@ PRODUCT_PACKAGES += \
 WITH_GMS_COMMS_SUITE := false
 WITH_GMS := true
 
+# Always preopt extracted APKs to prevent extracting out of the APK for gms
+# modules.
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
