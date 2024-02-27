@@ -166,6 +166,7 @@ PRODUCT_PACKAGES += \
 
 # GMS
 WITH_GMS_COMMS_SUITE := false
+WITH_GMS := true
 
 # AndroidGo Flags
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
