@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
 	android.hardware.bluetooth@1.0.vendor:64 \
 	android.hardware.bluetooth@1.1.vendor:64
 
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.default \

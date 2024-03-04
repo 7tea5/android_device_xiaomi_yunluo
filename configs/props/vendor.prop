@@ -5,6 +5,9 @@ persist.adb.nonblocking_ffs=0
 ro.vendor.have_aeev_feature=0
 ro.vendor.aee.convert64=1
 
+# APEX
+ro.apex.updatable=true
+
 # APU
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
@@ -12,6 +15,10 @@ ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 
 # Audio
+ro.vendor.audio.vocal.support=true
+ro.vendor.audio.voice.change.support=true
+ro.vendor.audio.volumeinit.yunluo=true
+ro.vendor.audio.bluetooth.support.misound=false
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
 persist.audio.button_jack.profile=volume
@@ -36,11 +43,15 @@ ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_audio_tuning_tool_ver=V1
 ro.vendor.mtk_hifiaudio_support=1
 
+# Board 
+ro.board.platform=mt6789
+
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac
 persist.bluetooth.a2dp_offload.disabled=true
 ro.bluetooth.a2dp_offload.supported=false
 ro.vendor.bt.platform=connac1x
+ro.vendor.mtk.bt_sap_enable=true
 vendor.bluetooth.ldac.abr=true
 
 # Camera
@@ -70,7 +81,19 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.mtk.camera.app.fd.video=1
 
+# Dalvik
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.isa.arm.features=default
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.mtk-stack-trace-file=/data/anr/mtk_traces.txt
+persist.sys.dalvik.vm.lib.2=libart.so
+
 # IMS
+persist.vendor.anr.enhancement=0
 persist.vendor.mims_support=1
 persist.vendor.vilte_support=0
 persist.vendor.viwifi_support=0
@@ -78,6 +101,11 @@ ro.vendor.md_auto_setup_ims=1
 ro.vendor.md_prop_ver=1
 
 # Data
+external_storage.casefold.enabled=1
+external_storage.projid.enabled=1
+external_storage.sdcardfs.enabled=0
+persist.sys.spc.enabled=true
+persist.sys.usb.config=none
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.incremental.enable=yes
 ro.vendor.efuse_writer_enable=1
@@ -90,6 +118,8 @@ debug.mediatek.appgamepq_compress=1
 debug.mediatek.disp_decompress=1
 graphics.gpu.profiler.support=true
 persist.log.tag.gralloc4=S
+persist.vendor.dc_backlight.enable=false
+persist.vendor.disable_idle_fps=false
 ro.hardware.egl=meow
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
@@ -98,6 +128,7 @@ ro.minui.default_rotation=ROTATION_DOWN
 ro.minui.pixel_format=BGRA_8888
 ro.opengles.version=196610
 ro.vendor.cabc.enable=true
+ro.vendor.colorpick_adjust=true
 ro.vendor.disable_idle_fps.threshold=400
 ro.vendor.display.default_fps=60
 ro.vendor.display.idle_default_fps=60
@@ -107,8 +138,12 @@ ro.vendor.displayfeature.dump=true
 ro.vendor.hbm_backlight.enable=false
 ro.vendor.histogram.enable=false
 ro.vendor.mtk_aal_support=1
+ro.vendor.mtk_aod_support=1
+ro.vendor.mtk_backlight_hwc_support=0
 ro.vendor.mtk_blulight_def_support=1
-ro.vendor.mtk_pq_color_mode=1
+
+#ro.vendor.mtk_pq_color_mode=1
+ro.vendor.mtk_pq_color_mode=3
 ro.vendor.mtk_pq_support=2
 ro.vendor.pq.mtk_aal_support=1
 ro.vendor.pq.mtk_ai_scence_pq_support=0
@@ -129,6 +164,7 @@ ro.vendor.pq.mtk_ds_support=0
 ro.vendor.pq.mtk_hdr10_plus_recording_support=0
 ro.vendor.pq.mtk_hfg_support=1
 ro.vendor.pq.mtk_mdp_ccorr_support=0
+ro.vendor.pq.mtk_mdp_lite_pq_support=0
 ro.vendor.pq.mtk_pq_interface_support=0
 ro.vendor.pq.mtk_pq_video_whitelist_support=0
 ro.vendor.pq.mtk_scltm_support=0
@@ -167,7 +203,7 @@ ro.vendor.mtk_log_hide_gps=0
 ro.vendor.mtk_wappush_support=1
 
 # SOC Props
-ro.soc.model=MT8781V/NA
+ro.soc.model=MT6789
 ro.soc.manufacturer=Mediatek
 
 # Media
@@ -180,9 +216,13 @@ ro.vendor.mtk_video_hevc_enc_support=1
 ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.smvr.p2batch.hd=4
 ro.vendor.smvr.p2batch.vga=8
+vendor.media.heif.feature.off=1
+vendor.media.heif.highThreshold=20
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # LMK
+ro.limit_cache.support=1
+ro.lmk.kill_heaviest_task=true
 ro.lmk.downgrade_pressure=60
 ro.lmk.kill_timeout_ms=100
 ro.lmk.psi_complete_stall_ms=70
@@ -223,6 +263,8 @@ persist.vendor.mtk_sim_switch_policy=2
 persist.vendor.radio.mtk_ps2_rat=L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 persist.vendor.radio.smart.data.switch=1
+ro.carrier=wifi-only
+ro.com.android.dataroaming=false
 ro.radio.noril=true
 ro.telephony.default_network=0,0,0,0
 ro.telephony.iwlan_operation_mode=AP-assisted
@@ -251,12 +293,14 @@ init.userspace_reboot.is_supported=true
 
 # SurfaceFlinger
 debug.renderengine.backend=skiaglthreaded
-debug.sf.enable_gl_backpressure=1
+debug.sf.auto_latch_unsignaled=false
+debug.sf.disable_backpressure=1
 debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=20000000
 debug.sf.early.sf.duration=27600000
 debug.sf.earlyGl.app.duration=20000000
 debug.sf.earlyGl.sf.duration=27600000
+debug.sf.enable_gl_backpressure=0
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.high_fps.early.app.duration=10000000
@@ -267,12 +311,13 @@ debug.sf.high_fps.hwc.min.duration=8500000
 debug.sf.high_fps.late.app.duration=10000000
 debug.sf.high_fps.late.sf.duration=13800000
 debug.sf.hwc.min.duration=17000000
-debug.sf.latch_unsignaled=1
+debug.sf.latch_unsignaled=true
 debug.sf.late.app.duration=20000000
 debug.sf.late.sf.duration=27600000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.set_idle_timer_ms=3000
 debug.sf.use_phase_offsets_as_durations=1
+ro.sf.lcd_density=280
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
@@ -286,25 +331,53 @@ ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.composer_version=2.1
 vendor.debug.sf.cpupolicy.base_min_bl=310
+vendor.debug.sf.cpupolicy.boost_idle_bl=1
 vendor.debug.sf.cpupolicy.hw_comp_suspend=1
 vendor.debug.sf.cpupolicy.hw_hfr_suspend=1
 vendor.debug.sf.cpupolicy.lowbound_uclamp_min=165
 vendor.debug.sf.cpupolicy.max_correct_offset=150
+vendor.debug.sf.cpupolicy.min_120=165
 vendor.debug.sf.cpupolicy.min_30_mml=165
 vendor.debug.sf.cpupolicy.min_60=130
 vendor.debug.sf.cpupolicy.min_60_mml=165
 vendor.debug.sf.cpupolicy.min_90=165
-vendor.debug.sf.cpupolicy.min_120=165
 vendor.debug.sf.cpupolicy.min_boost=165
 vendor.debug.sf.cpupolicy.power_down_120=300000
 vendor.debug.sf.cpupolicy.power_up_120=-300000
-vendor.debug.sf.cpupolicy.re_hfr=0
+vendor.debug.sf.cpupolicy.re_hfr=1
 vendor.debug.sf.cpupolicy.rt_bl_min=300
 vendor.debug.sf.cpupolicy.sf_cpu_thres=290
 vendor.debug.sf.cpupolicy.upbound_uclamp_max_ll=262
 vendor.debug.sf.cpupolicy.upbound_uclamp_min=350
 vendor.debug.sf.cpupolicy.upbound_uclamp_ret_sys=210
 vendor.debug.sf.cpupolicy.xgf_min=25
+vendor.debug.sf.dynamic_duration.app.decouple=20000000
+vendor.debug.sf.dynamic_duration.app.early.120=11600000
+vendor.debug.sf.dynamic_duration.app.early.60=16600000
+vendor.debug.sf.dynamic_duration.app.early.90=19200000
+vendor.debug.sf.dynamic_duration.app.early=18000000
+vendor.debug.sf.dynamic_duration.app.earlyGl.120=11600000
+vendor.debug.sf.dynamic_duration.app.earlyGl.60=16600000
+vendor.debug.sf.dynamic_duration.app.earlyGl.90=19200000
+vendor.debug.sf.dynamic_duration.app.earlyGl=18000000
+vendor.debug.sf.dynamic_duration.app.late.120=11600000
+vendor.debug.sf.dynamic_duration.app.late.60=16600000
+vendor.debug.sf.dynamic_duration.app.late.90=19200000
+vendor.debug.sf.dynamic_duration.app.late=18000000
+vendor.debug.sf.dynamic_duration.sf.decouple=27600000
+vendor.debug.sf.dynamic_duration.sf.early.120=12300000
+vendor.debug.sf.dynamic_duration.sf.early.60=15600000
+vendor.debug.sf.dynamic_duration.sf.early.90=13100000
+vendor.debug.sf.dynamic_duration.sf.early=14600000
+vendor.debug.sf.dynamic_duration.sf.earlyGl.120=12300000
+vendor.debug.sf.dynamic_duration.sf.earlyGl.60=15600000
+vendor.debug.sf.dynamic_duration.sf.earlyGl.90=13100000
+vendor.debug.sf.dynamic_duration.sf.earlyGl=14600000
+vendor.debug.sf.dynamic_duration.sf.late.120=12300000
+vendor.debug.sf.dynamic_duration.sf.late.60=15600000
+vendor.debug.sf.dynamic_duration.sf.late.90=13100000
+vendor.debug.sf.dynamic_duration.sf.late=14600000
+vendor.debug.sf.dynamic_duration.switch=1
 
 # TEE
 ro.hardware.gatekeeper=beanpod
@@ -332,3 +405,44 @@ ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6789
 ro.vendor.wlan.standalone.log=y
 vendor.connsys.driver.ready=no
+
+ro.control_privapp_permissions=enforce
+ro.cp_system_other_odex=1
+ro.vendor.dexopt_ext.support=true
+ro.boot.dynamic_partitions=true
+ro.build.ab_update=true
+ro.vendor.fps.switch.default=true
+ro.vendor.fps.switch.thermal=true
+ro.vendor.gcp.enable=true
+ro.vendor.iomanager.support=1
+ro.vendor.init.sensor.rc=init.sensor_2_0.rc
+ro.vendor.memfusion.support=1
+ro.vendor.memfusion2_1.support=true
+ro.vendor.memfusion2_2.support=true
+
+ro.vendor.powerdata.support=1
+ro.vendor.powerhal.cloud=1
+ro.vendor.powerhal.encode=1
+ro.vendor.powerhal.thermal_ux_support=1
+ro.vendor.powerhal_fling_mode_support=1
+
+ro.vendor.set_fps_stat_timer_ms=1000
+ro.vendor.tp_idle_fps=60
+ro.vendor.video_box.version=0
+
+ro.vendor.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.vendor.product.cpu.abilist64=arm64-v8a
+ro.vendor.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.vendor.rc=/vendor/etc/init/hw/
+
+ro.vendor.tp_idle_fps=60
+ro.vendor.video_box.version=0
+
+ro.virtual_ab.compression.enabled=true
+ro.virtual_ab.enabled=true
+ro.virtual_ab.userspace.snapshots.enabled=true
+
+ro.zygote=zygote64_32
+sys.displayfeature_hidl=true
+
+vendor.dalvik.vm.dex2oat-threads-ext=3

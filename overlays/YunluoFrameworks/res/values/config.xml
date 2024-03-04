@@ -493,9 +493,9 @@
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
-    <integer name="config_screenBrightnessSettingDefault">307</integer>
-    <integer name="config_screenBrightnessSettingMaximum">2047</integer>
-    <integer name="config_screenBrightnessSettingMinimum">8</integer>
+    <integer name="config_screenBrightnessSettingDefault">56</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <integer name="config_screenBrightnessSettingMinimum">3</integer>
 
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>

@@ -11,7 +11,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.systemui.yunluo">
+    package="com.evolution.systemui.overlay.yunluo">
 
     <overlay
       android:targetPackage="com.android.systemui"
