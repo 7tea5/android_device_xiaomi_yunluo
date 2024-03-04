@@ -3,7 +3,7 @@
     package="com.google.android.overlay.yunluo.gms">
     <application android:extractNativeLibs="true" android:hasCode="false" />
     <overlay android:targetPackage="android"
-             android:priority="1"
+             android:priority="999"
              android:requiredSystemPropertyName="ro.com.google.gmsversion"
              android:isStatic="true"
              android:requiredSystemPropertyValue="*" />

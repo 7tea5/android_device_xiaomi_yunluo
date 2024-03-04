@@ -1,0 +1,53 @@
+<!--
+   Copyright (C) 2018 The Android Open Source Project
+  
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MANUFACTURER $2=MODEL-->
+    <string translatable="false" name="def_device_name">Redmi Pad</string>
+
+    <!-- Default for Settings.Global.DEVICE_NAME $1=MODEL-->
+    <string translatable="false" name="def_device_name_simple">Redmi Pad</string>
+
+    <integer name="def_screen_off_timeout">120000</integer>
+    <bool name="def_accelerometer_rotation">true</bool>
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+    <fraction name="def_window_animation_scale">115%</fraction>
+    <fraction name="def_window_transition_scale">115%</fraction>
+    <bool name="def_haptic_feedback">false</bool>
+    <bool name="def_bluetooth_on">false</bool>
+
+    <!-- Default for Settings.System.VIBRATE_IN_SILENT -->
+    <bool name="def_vibrate_in_silent">false</bool>
+
+    <!-- Default for Settings.Secure.CHARGING_VIBRATION_ENABLED -->
+    <bool name="def_charging_vibration_enabled">false</bool>
+    
+    <!-- Default for Settings.Global.ZEN_DURATION
+        If 0, turning on dnd manually will last indefinitely.
+        Else if non-negative, turning on dnd manually will last for this many minutes.
+        Else (if negative), turning on dnd manually will surface a dialog that prompts
+            user to specify a duration.-->
+    <integer name="def_zen_duration">-1</integer>
+
+    <!-- Default setting for Settings.Global.MOBILE_DATA_ALWAYS_ON -->
+    <bool name="def_mobile_data_always_on">false</bool>
+
+    <!-- Set default screen rotation to 90 degrees, 1 refers to value of android.view.Surface.ROTATION_90 -->
+    <!-- Default for Settings.System.USER_ROTATION -->
+    <integer name="def_user_rotation">1</integer>
+    
+</resources>

@@ -305,12 +305,6 @@ PRODUCT_PACKAGES += \
 	libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-
 # Permissions
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.xml \
@@ -355,15 +349,19 @@ PRODUCT_COPY_FILES += \
 
 # RRO
 PRODUCT_PACKAGES += \
-	FrameworksResOverlayYunluo \
-    SettingsOverlayYunluo \
-	SettingsResOverlayYunluo \
-	SystemUIOverlayYunluo \
-	TitanSettingsOverlay \
-	TitanSettingsProviderOverlay \
-	TitanSysuiConfigOverlay \
-    WifiResOverlayYunluo \
-	YunluoGMSOverlay
+	EvolutionXYunluoFrameworks \
+	EvolutionXYunluoSettings \
+	EvolutionXYunluoSystemUI \
+	LargeScreenConfig \
+	TitanSettings \
+	TitanSettingsRes \
+	TitanSystemUI \
+	YunluoFrameworks \
+	YunluoGMSOverlay \
+    YunluoSettings \
+	YunluoSettingsProvider \
+	YunluoSystemUI \
+    YunluoWifiOverlay 
 
 # Init files
 PRODUCT_PACKAGES += \

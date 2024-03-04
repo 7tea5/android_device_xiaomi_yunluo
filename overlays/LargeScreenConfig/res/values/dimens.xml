@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Aspect ratio of letterboxing for fixed orientation. Values <= 1.0 will be ignored.
+         Note: Activity min/max aspect ratio restrictions will still be respected.
+         Therefore this override can control the maximum screen area that can be occupied by
+         the app in the letterbox mode. -->
+    <dimen name="config_fixedOrientationLetterboxAspectRatio">1.333</dimen>
+
+    <!-- Vertical position of a center of the letterboxed app window.
+        0 corresponds to the upper side of the screen and 1 to the lower side. If given value < 0
+        or > 1 it is ignored and for non-tabletop mode central position is used (0.5); for
+         tabletop mode top (0.0) is used. -->    
+    <dimen name="config_letterboxVerticalPositionMultiplier">0.5</dimen>
+
+</resources>
