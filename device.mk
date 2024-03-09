@@ -6,6 +6,17 @@
 
 BOARD_WITHOUT_RADIO := true
 
+# Verify apps
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+RELAX_USES_LIBRARY_CHECK := true
+
+# 2-pane layout
+PRODUCT_PACKAGES += \
+    androidx.window.extensions
+
+# Inherit Window Extensions
+$(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
+
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
 	NexusLauncherRelease \
@@ -177,7 +188,6 @@ PRODUCT_PACKAGES += \
 
 # GMS
 WITH_GMS_COMMS_SUITE := false
-WITH_GMS := true
 
 # Speed profile services and wifi-service to reduce RAM and storage.
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile

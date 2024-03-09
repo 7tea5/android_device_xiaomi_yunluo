@@ -193,6 +193,7 @@ include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Properties
+TARGET_PRODUCT_PROP += $(CONFIGS_PATH)/props/product.prop
 TARGET_SYSTEM_PROP += $(CONFIGS_PATH)/props/system.prop
 TARGET_SYSTEM_EXT_PROP += $(CONFIGS_PATH)/props/system_ext.prop
 TARGET_VENDOR_PROP += $(CONFIGS_PATH)/props/vendor.prop

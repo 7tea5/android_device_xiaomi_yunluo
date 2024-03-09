@@ -1,0 +1,18 @@
+#enable_one_pane_in_embedded_activity=true
+#persist.wm.extensions.enabled=true
+#ro.storage_manager.show_opt_in=false
+#setupwizard.feature.baseline_setupwizard_enabled=true
+#setupwizard.feature.day_night_mode_enabled=true
+#setupwizard.feature.enable_wifi_tracker=true
+#setupwizard.feature.lifecycle_refactoring=true
+#setupwizard.feature.notification_refactoring=true
+#setupwizard.feature.portal_notification=true
+#setupwizard.feature.show_support_link_in_deferred_setup=false
+#setupwizard.theme=glif_v4_light
+
+# Netflix
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
+
+#vendor.debug.sf.cpupolicy=0
+pm.dexopt.async.enabled=false
