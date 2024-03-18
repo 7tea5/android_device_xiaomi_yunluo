@@ -366,6 +366,7 @@ PRODUCT_PACKAGES += \
 	EvolutionXYunluoSettings \
 	EvolutionXYunluoSystemUI \
 	LargeScreenConfig \
+	NexusLauncherResOverlay \
 	TitanSettings \
 	TitanSettingsRes \
 	TitanSystemUI \
