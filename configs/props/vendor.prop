@@ -447,3 +447,5 @@ ro.zygote=zygote64_32
 sys.displayfeature_hidl=true
 
 vendor.dalvik.vm.dex2oat-threads-ext=3
+
+ro.setupwizard.rotation_locked=false
